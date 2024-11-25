@@ -1,0 +1,58 @@
+.card {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 18rem;
+    height: 25rem;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    margin-top: 0.5rem;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.cardTitle {
+    margin: 0;
+    padding-top: 0.5em;
+    width: 100%;
+    height: 20em;
+}
+
+.cardAmount {
+    font-size: 3em;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 25em;
+}
+
+.cardSpeed {
+    background-color: rgb(176, 175, 175);
+    color: black;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 20em;
+}
+
+.cardFooter {
+    background-color: rgb(108, 107, 107);
+    color: black;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 20em;
+}
+
+.cardCurrency {
+    font-size: 0.5em;
+}
