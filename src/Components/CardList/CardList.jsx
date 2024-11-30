@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Card from '../Card/Card';
 import data from '../../data.json';
-import './cardList.css';
+import styles from './cardList.module.css';
 
 
 function CardList () {
@@ -11,7 +11,7 @@ function CardList () {
     }, []);
 
     return (
-        <div className='cardList'>
+        <div className={styles.cardList}>
             {items.map(item => (
                 <Card key={item.id} 
                 name={item.name} 

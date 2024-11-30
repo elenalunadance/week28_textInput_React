@@ -1,20 +1,30 @@
-import React from "react";
-import "./card.css";
+import React, { useState } from "react";
+import styles from "./card.module.css";
 
+const Card = ({ name, amount, speed, type, onClick }) => {
+    const [selected, setSelected] = useState(false);
 
-const Card = (props) => {
+    const handleClick = () => {
+        setSelected(!selected);
+        onClick && onClick(!selected);
+    };
 
-return (
-    <div className="card" style={{ 
-        height: props.type === "Red" ? '26rem' : '25rem', 
-        marginTop: props.type === "Red" ? '0' : '0.5rem' 
-    }}
-    >
-        <h4 className="cardTitle" style={{backgroundColor: props.type}}>{props.name}</h4>
-        <p className="cardAmount" style={{backgroundColor: props.type}}>{props.amount}<span className="cardCurrency">руб/мес</span></p>
-        <p className="cardSpeed">{props.speed}</p>
-        <p className="cardFooter">Объем включенного трафика неограничен</p>
-    </div>
+    return (
+        <div
+            className={`${styles.card} ${selected ? styles.selected : ''}`}
+            style={{
+                height: type === "Red" ? '26rem' : '25rem',
+                marginTop: type === "Red" ? '0' : '0.5rem',
+            }}
+            onClick={handleClick}
+        >
+            <h4 className={styles.cardTitle} style={{ backgroundColor: type }}>{name}</h4>
+            <p className={styles.cardAmount} style={{ backgroundColor: type }}>
+                {amount}<span className={styles.cardCurrency}>руб/мес</span>
+            </p>
+            <p className={styles.cardSpeed}>{speed}</p>
+            <p className={styles.cardFooter}>Объем включенного трафика неограничен</p>
+        </div>
     );
 };
 
