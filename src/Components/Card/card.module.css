@@ -3,7 +3,6 @@
     width: 18rem;
     height: 25rem;
     border: 1px solid #ccc;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     color: white;
     text-align: center;
     display: flex;
@@ -15,10 +14,7 @@
     margin-top: 0.5rem;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
+
 
 .cardTitle {
     margin: 0;
@@ -55,4 +51,8 @@
 
 .cardCurrency {
     font-size: 0.5em;
+}
+
+.selected {
+    transform: scaleX(1.2) scaleY(1.2);
 }
