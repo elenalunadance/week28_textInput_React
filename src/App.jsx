@@ -1,4 +1,4 @@
-import CardList from './Components/CardList/CardList';
+import TextInpit from './Components/CardList/TextInput';
 
 
 
@@ -6,7 +6,7 @@ function App() {
 
     return (
       <div className='App'>
-        <CardList />
+        <TextInpit />
       </div>
     )
   
