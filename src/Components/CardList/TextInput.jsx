@@ -23,7 +23,7 @@ function TextInput() {
                 onChange={handleInputChange}
             />
             <button type="submit" className={styles.addBtn}>Add</button>
-            {isPressed && <p>{inputText}</p>}
+            {isPressed && <p>{inputText.toUpperCase()}</p>}
         </form>
     );
 }
